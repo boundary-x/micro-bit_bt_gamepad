@@ -1,4 +1,4 @@
-const cacheName = 'gamepad-support-v2';
+const cacheName = 'gamepad-support-v3';
 const precacheResources = [
     'index.html',
     // CSS
@@ -41,7 +41,7 @@ self.addEventListener('install', event => {
 });
 
 self.addEventListener('activate', event => {
-    event.waitUntil(Promise.all([caches.delete('cache-v1'), caches.delete('gamepad-support-v1')]));
+    event.waitUntil(Promise.all([caches.delete('cache-v1'), caches.delete('gamepad-support-v1'), caches.delete('gamepad-support-v2')]));
 });
 
 self.addEventListener('fetch', event => {
