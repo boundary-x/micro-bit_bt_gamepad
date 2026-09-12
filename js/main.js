@@ -77,7 +77,12 @@
   // ─────────────────────────────────────────────
   // 버튼 공통 처리 (터치/마우스/키보드 모두 사용)
   // ─────────────────────────────────────────────
+  function controlsBlocked() {
+    return document.body.classList.contains("support-active") || $("#settings-modal").is(":visible") || /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName) || document.activeElement.isContentEditable;
+  }
+
   function controllerButtonPressed(buttonName) {
+    if (controlsBlocked()) return;
     let logMsg = 'Pressed: ' + buttonName;
     sound.play(buttonName);
     if (settings.vibrate.value && navigator.vibrate) {
@@ -153,6 +158,7 @@
   // 설정 모달
   // ─────────────────────────────────────────────
   function showSettingsModal(show) {
+    clearControllerKeys();
     if (show) {
       $('#settings-modal').fadeIn(500);
       $('body').css('overflow', 'hidden');
@@ -341,9 +347,16 @@
     });
   }
 
+  function clearControllerKeys() {
+    Object.keys(pressedKeys).forEach(k => pressedKeys[k] = false);
+    resetAllKeyboardAnimations();
+  }
+  document.addEventListener("supportopening", clearControllerKeys);
+
   function setUpKeyboardHandlers() {
     // keydown: 전송 + 애니메이션
     $(document).on('keydown', function (e) {
+      if (controlsBlocked()) return;
       const key = e.key;
       const buttonName = KEY_TO_BUTTON[key];
       if (!buttonName) return;
@@ -387,3 +400,4 @@
   setUpKeyboardHandlers();   // ← 추가
 
 })(jQuery, screenfull, sound);
+

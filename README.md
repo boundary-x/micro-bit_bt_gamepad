@@ -27,3 +27,12 @@ We have modified and extended the original project to improve compatibility, usa
 
 > Original project by [@carlosperate](https://github.com/carlosperate):  
 > https://github.com/carlosperate/microbit-gamepad
+
+
+## Guide and Support
+
+Open **도움말** for a six-step walkthrough, current UART messages and keyboard mapping, micro:bit examples, classroom resources, troubleshooting and release notes. A help button is also available inside fullscreen mode. The tour exits fullscreen to highlight header controls.
+
+Gamepad keyboard commands are suspended while Help or Settings is open and while editing input fields. Closing these views restores controller operation. Settings remain session-only. Releasing a button does not send an automatic stop command.
+
+Support text follows the Boundary X introduction and the actual controller behavior. No Node.js installation is needed to use the deployed app.

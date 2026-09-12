@@ -1,6 +1,5 @@
-const cacheName = 'cache-v1';
+const cacheName = 'gamepad-support-v1';
 const precacheResources = [
-    '/',
     'index.html',
     // CSS
     'css/vendor/boilerplate.css',
@@ -17,7 +16,9 @@ const precacheResources = [
     'js/vendor/jquery-touch-click.js',
     'js/vendor/screenfull-4.2.1.min.js',
     'js/vendor/microbit-0.4.0.umd.js',
-    'js/microbitBle.js',
+    'js/support.js',
+    'css/support.css',
+    'js/vendor/lowLag.js',
     'js/sound.js',
     'js/main.js',
     // Images
@@ -40,7 +41,7 @@ self.addEventListener('install', event => {
 });
 
 self.addEventListener('activate', event => {
-    console.log('Service worker activated.');
+    event.waitUntil(caches.delete('cache-v1'));
 });
 
 self.addEventListener('fetch', event => {
@@ -52,3 +53,4 @@ self.addEventListener('fetch', event => {
         return fetch(event.request);
     }));
 });
+

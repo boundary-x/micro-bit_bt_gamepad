@@ -63,7 +63,7 @@ body {
 
 #button-connect,
 #button-settings,
-#button-hex {
+#button-help {
   width: -moz-calc(33% - 14px);
   width: -webkit-calc(33% - 14px);
   width: -o-calc(33% - 14px);
@@ -78,7 +78,7 @@ body {
   }
   #button-connect,
   #button-settings,
-  #button-hex {
+  #button-help {
     width: -moz-calc(33% - 10px);
     width: -webkit-calc(33% - 10px);
     width: -o-calc(33% - 10px);
@@ -222,3 +222,4 @@ body {
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
 }
+

@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="css/vendor/boilerplate.css">
   <link rel="stylesheet" href="css/vendor/nes-2.2.0.min.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/support.css">
 </head>
 
 <body>
@@ -108,10 +109,11 @@
     </div>
     <div id="header-buttons">
         <button id="button-connect" type="button" class="nes-btn is-primary">Connect</button>
-        <a id="button-hex" class="nes-btn" href="https://makecode.microbit.org/_JLkhLvHu3Ycm" target="_blank" rel="noopener">Hex file</a>
+        <button id="button-help" class="nes-btn" type="button">도움말</button>
         <button id="button-settings" type="button" class="nes-btn is-warning">Settings</button>
     </div>
     <div id="controller-svg-div">
+      <button id="fullscreen-help" type="button" aria-label="사용 가이드 및 지원">?</button>
       <img id="full-screen-icon" class="nes-pointer" src="img/full-screen.png" alt="full screen icon">
       <svg version="1.1" id="controller-svg" x="0px" y="0px" viewBox="0 270 612 252" enable-background="new 0 270 612 252" xml:space="preserve">
         <!--
@@ -196,6 +198,7 @@
   <script src="js/vendor/microbit-0.4.0.umd.js"></script>
   <script src="js/sound.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/support.js"></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
@@ -210,3 +213,4 @@
 </body>
 
 </html>
+

@@ -1,0 +1,19 @@
+#button-help,#fullscreen-help{font-family:Arial,sans-serif}
+#fullscreen-help{display:none;position:absolute;right:70px;top:12px;z-index:3;width:40px;height:40px;border:3px solid #222;background:#fff;color:#111;font-size:22px;cursor:pointer}
+#controller-svg-div:fullscreen #fullscreen-help{display:block}
+#controller-svg-div:-webkit-full-screen #fullscreen-help{display:block}
+.support-dialog{box-sizing:border-box;border:4px solid #222;padding:0;color:#171717;background:#fff;font:16px/1.6 Arial,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;width:min(660px,calc(100% - 32px));max-height:90dvh;overflow:auto;user-select:text}
+.support-dialog *{box-sizing:border-box;font-family:inherit}
+.support-dialog::backdrop{background:#0009}
+.support-heading{position:sticky;top:0;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 20px;background:#fff;border-bottom:2px solid #222;z-index:1}
+.support-heading h2{font-size:20px;margin:0}
+.support-dialog button{min-height:44px;padding:8px 12px;border:2px solid #222;background:#fff;color:#111;cursor:pointer;font-size:15px}
+.support-dialog button:focus-visible,.support-dialog a:focus-visible,.support-dialog summary:focus-visible{outline:3px solid #1676d2;outline-offset:3px}
+.support-content{padding:20px}.support-content p{margin:12px 0}.support-content details{border-top:1px solid #bbb;padding:14px 0}.support-content summary{font-weight:bold;cursor:pointer;min-height:32px}.support-content a{color:#175aa5;display:inline-block;padding:8px 0;overflow-wrap:anywhere}
+.support-dialog .support-primary{background:#222;color:#fff;width:100%;margin-bottom:16px}.support-dialog table{width:100%;border-collapse:collapse;font-size:14px;table-layout:fixed}.support-dialog td,.support-dialog th{border:1px solid #ccc;padding:8px;overflow-wrap:anywhere;text-align:left}
+#game-tour{background:transparent;border:0;max-width:none;max-height:none;width:100vw;height:100dvh;margin:0;padding:0;overflow:hidden;user-select:none}
+#game-tour::backdrop{background:#0009}
+#tour-spot{position:fixed;border:3px solid #fff;box-shadow:0 0 0 3px #222;pointer-events:none}
+#tour-panel{position:fixed;background:white;border:3px solid #222;padding:16px;width:340px;max-height:calc(100dvh - 24px);overflow:auto}
+#tour-panel h2{font-size:20px;margin:12px 0}#tour-panel p{margin:12px 0}.tour-nav{display:flex;justify-content:space-between;gap:12px}.tour-top{display:flex;justify-content:space-between;align-items:center;gap:12px}.tour-caption{font-size:13px;color:#555}
+@media(max-width:600px){#game-support{width:100%;height:100dvh;max-height:100dvh;margin:0;border-width:0}.support-heading{padding:12px 16px}.support-content{padding:16px}}
